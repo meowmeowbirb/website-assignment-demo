@@ -1,0 +1,239 @@
+/* ================= style.css ================= */
+
+/* Global style for the whole page */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0b0f;
+  color: white;
+}
+
+/* Navigation bar at the top*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(20,20,30,0.9);
+  box-shadow: 0 0 10px rgba(255,105,180,0.5);
+}
+
+.logo {
+  color: #ff69b4;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff69b4;
+}
+
+/* Hero section (the big banner on the home page) */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    url(https://i.pinimg.com/736x/8b/5e/dc/8b5edc0cd9ca8b71fc955e5d5f246426.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+/* Main button style */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff69b4;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff1493;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+/* Titles for each page section */
+.section-title {
+  text-align: center;
+  margin: 30px 0;
+  color: #ff69b4;
+}
+
+/* Layout for 3 feature cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  background: #14141f;
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+  border: 1px solid #ff69b4;
+}
+
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.tag {
+color: #ff69b4;        /* Pink color for the anime series name */
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+/* Character description in cards */
+.card p:not(.tag){
+  font-size: 14px;
+  color: #cccccc;        /* Slightly grey to make the title stand out */
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+/* Gallery layout for the media page */
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height:400px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Style for character items in the gallery */
+.image-item a {
+  position: relative; 
+  display: inline-block;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.image-item img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Ensure gallery images stay the correct size */
+.image-item a:hover {
+  transform: scale(1.02);
+}
+
+
+/* This styles the heart and the number */
+.heart-rank {
+  position: absolute;
+  top: 10px;         /* Distance from the top */
+  left: 10px;        /* Distance from the left */
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #ff69b4; /* Pink border to match theme */
+  pointer-events: none;      /* Makes sure you can still click the image under it */
+  z-index: 2;
+}
+
+.heart-info h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: white;
+  text-align: center;
+}
+
+/* centering the video */
+video {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling the ranking table */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #14141f;
+  border-radius: 10px;
+  overflow: hidden; /* Makes the rounded corners show up */
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background-color: #ff69b4;
+  color: white;
+}
+
+tr:hover {
+  background-color: #1a1a2e; /* Highlights the row when you hover! */
+}	
+
+/* footer styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #14141f;
+  margin-top: 40px;
+  border-top: 4px solid #ff1493;
+}
